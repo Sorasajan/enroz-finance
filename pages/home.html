@@ -1,0 +1,289 @@
+<!-- ============================================================
+   Enroz Financial Solution — Home Page
+   This file is included by index.html as a page section.
+   Do NOT open this file directly in a browser.
+   ============================================================ -->
+<div id="page-home" class="page  active" role="main" aria-label="Home">
+
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="hero-grain relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-navydark via-navy to-[#1e88e5]">
+  <!-- Decorative orbs -->
+  <div class="orb1 absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-white/5 blur-3xl pointer-events-none"></div>
+  <div class="orb2 absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-sage/10 blur-3xl pointer-events-none"></div>
+  <!-- Grid pattern -->
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image:repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 48px),repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 48px)"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Left -->
+    <div>
+      <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-8">
+        <span class="pulse-dot w-2 h-2 rounded-full bg-sage inline-block"></span>
+        Nepal's Trusted SME Partner
+      </div>
+      <h1 class="font-display text-5xl lg:text-7xl text-white leading-[1.1] mb-6">
+        Accounting &amp;<br><em class="text-blue-200">Compliance</em><br>Done Right.
+      </h1>
+      <p class="text-white/75 text-lg leading-relaxed mb-10 max-w-lg">
+        Full year-round compliance management, real-time financial insights, and urgent task handling — all in one predictable monthly fee. Built for Nepal's small and medium enterprises.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#portfolio" onclick="navigate('portfolio');return false;" class="bg-sage hover:bg-sagedark text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-sage/30">
+          View Packages
+        </a>
+        <a href="#services" onclick="navigate('services');return false;" class="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-all hover:bg-white/10">
+          Our Services
+        </a>
+      </div>
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-6 mt-12 text-white/60 text-sm">
+        <span class="flex items-center gap-2"><span class="text-sage">✓</span> No setup fee</span>
+        <span class="flex items-center gap-2"><span class="text-sage">✓</span> First month 50% off</span>
+        <span class="flex items-center gap-2"><span class="text-sage">✓</span> 4hr response time</span>
+      </div>
+    </div>
+    <!-- Right: Glass stat card -->
+    <div class="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+      <p class="text-white/60 text-sm font-semibold tracking-wider uppercase mb-6">Why Businesses Trust Enroz</p>
+      <div class="space-y-6">
+        <div class="flex items-center gap-5">
+          <div class="text-4xl font-display font-bold text-sage" data-counter="100" data-suffix="%">0%</div>
+          <p class="text-white/80 text-sm leading-snug">Timely filing guarantee — <br>we pay penalties if we miss</p>
+        </div>
+        <div class="border-t border-white/10"></div>
+        <div class="flex items-center gap-5">
+          <div class="text-4xl font-display font-bold text-blue-200" data-counter="24" data-suffix="hr">0hr</div>
+          <p class="text-white/80 text-sm leading-snug">Express turnaround on <br>urgent compliance tasks</p>
+        </div>
+        <div class="border-t border-white/10"></div>
+        <div class="flex items-center gap-5">
+          <div class="text-4xl font-display font-bold text-sage" data-counter="4" data-suffix="hr">0hr</div>
+          <p class="text-white/80 text-sm leading-snug">WhatsApp/call support <br>response guarantee</p>
+        </div>
+        <div class="border-t border-white/10"></div>
+        <div class="flex items-center gap-5">
+          <div class="text-4xl font-display font-bold text-blue-200" data-counter="50" data-suffix="%">0%</div>
+          <p class="text-white/80 text-sm leading-snug">Off your first month — <br>experience quality risk-free</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs">
+    <span>Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-white/40 to-transparent"></div>
+  </div>
+</section>
+
+<!-- ── MARQUEE STRIP ──────────────────────────────────────── -->
+<div class="bg-ink py-4 overflow-hidden select-none">
+  <div class="marquee-inner text-white/30 text-xs font-semibold tracking-widest uppercase gap-12">
+    <span class="px-8 text-sage/80">✦ No Setup Fee</span>
+    <span class="px-8">Bookkeeping</span>
+    <span class="px-8 text-sage/80">✦ VAT Returns</span>
+    <span class="px-8">TDS Filing</span>
+    <span class="px-8 text-sage/80">✦ Payroll &amp; SSF</span>
+    <span class="px-8">Company Returns</span>
+    <span class="px-8 text-sage/80">✦ 24hr Express</span>
+    <span class="px-8">Income Tax</span>
+    <span class="px-8 text-sage/80">✦ Free Upgrades</span>
+    <span class="px-8">Data Encrypted</span>
+    <!-- duplicate for seamless loop -->
+    <span class="px-8 text-sage/80">✦ No Setup Fee</span>
+    <span class="px-8">Bookkeeping</span>
+    <span class="px-8 text-sage/80">✦ VAT Returns</span>
+    <span class="px-8">TDS Filing</span>
+    <span class="px-8 text-sage/80">✦ Payroll &amp; SSF</span>
+    <span class="px-8">Company Returns</span>
+    <span class="px-8 text-sage/80">✦ 24hr Express</span>
+    <span class="px-8">Income Tax</span>
+    <span class="px-8 text-sage/80">✦ Free Upgrades</span>
+    <span class="px-8">Data Encrypted</span>
+  </div>
+</div>
+
+<!-- ── ABOUT PREVIEW ──────────────────────────────────────── -->
+<section class="py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal-left">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=720&q=80" alt="Accounting professionals" class="rounded-3xl w-full h-[480px] object-cover shadow-2xl">
+        <!-- Floating badge -->
+        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-5 border border-mist">
+          <p class="text-xs text-slate font-semibold uppercase tracking-wider mb-1">Starting from</p>
+          <p class="font-display text-3xl font-bold text-navy">NPR 7,500<span class="text-base font-body font-normal text-slate">/mo</span></p>
+        </div>
+        <!-- Green accent -->
+        <div class="absolute -top-4 -left-4 w-24 h-24 rounded-2xl bg-sage/10 -z-10"></div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <span class="inline-block bg-navylight text-navy text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">About Enroz</span>
+      <h2 class="font-display text-5xl text-ink leading-tight mb-6">Your Complete <em>Financial</em> Partner</h2>
+      <p class="text-slate text-lg leading-relaxed mb-5">Enroz Financial Solution is Nepal's dedicated all-in-one accounting and compliance partner for small and medium enterprises. We don't just file returns — we manage your <strong>full year-round compliance</strong>, provide real-time insights, and handle urgent tasks seamlessly.</p>
+      <p class="text-slate leading-relaxed mb-8">Whether you're in Kathmandu or running your business remotely, you only need to send digital files — scanned bills, bank statements — and our best-in-class, regularly upgraded system handles everything behind the scenes.</p>
+      <div class="grid grid-cols-2 gap-4 mb-10">
+        <div class="bg-cream rounded-2xl p-4 border border-mist">
+          <div class="text-2xl mb-2">🔒</div>
+          <h4 class="font-semibold text-sm mb-1">Data Security</h4>
+          <p class="text-xs text-slate">Encrypted, confidential storage</p>
+        </div>
+        <div class="bg-cream rounded-2xl p-4 border border-mist">
+          <div class="text-2xl mb-2">🌐</div>
+          <h4 class="font-semibold text-sm mb-1">Remote Friendly</h4>
+          <p class="text-xs text-slate">100% digital — no office visit</p>
+        </div>
+        <div class="bg-cream rounded-2xl p-4 border border-mist">
+          <div class="text-2xl mb-2">🎯</div>
+          <h4 class="font-semibold text-sm mb-1">Filing Guarantee</h4>
+          <p class="text-xs text-slate">We pay penalties for our errors</p>
+        </div>
+        <div class="bg-cream rounded-2xl p-4 border border-mist">
+          <div class="text-2xl mb-2">🔔</div>
+          <h4 class="font-semibold text-sm mb-1">Advisory Alerts</h4>
+          <p class="text-xs text-slate">Deadline reminders via WhatsApp</p>
+        </div>
+      </div>
+      <a href="#about" onclick="navigate('about');return false;" class="inline-flex items-center gap-2 text-navy font-semibold hover:gap-4 transition-all">Our Story <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES PREVIEW ───────────────────────────────────── -->
+<section class="py-28 bg-cream diagonal-top diagonal-bottom">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <span class="inline-block bg-white border border-mist text-navy text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-5">What We Do</span>
+      <h2 class="font-display text-5xl text-ink leading-tight mb-4">Complete Year-Round <em>Coverage</em></h2>
+      <p class="text-slate max-w-xl mx-auto">From daily bookkeeping to annual company returns — every compliance need, managed expertly.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- S1 -->
+      <div class="scard bg-white rounded-2xl p-7 border border-mist reveal" style="transition-delay:.05s">
+        <div class="scard-icon w-14 h-14 rounded-xl bg-navylight flex items-center justify-center text-2xl mb-5">📒</div>
+        <h3 class="font-semibold text-lg mb-2">Bookkeeping</h3>
+        <p class="text-slate text-sm leading-relaxed mb-4">Daily/weekly processing of invoices, receipts, bank statements with full reconciliation.</p>
+        <a href="#services" onclick="navigate('services');return false;" class="text-navy text-sm font-semibold hover:gap-3 flex items-center gap-2 transition-all">Learn more <span>→</span></a>
+      </div>
+      <!-- S2 -->
+      <div class="scard bg-white rounded-2xl p-7 border border-mist reveal" style="transition-delay:.1s">
+        <div class="scard-icon w-14 h-14 rounded-xl bg-navylight flex items-center justify-center text-2xl mb-5">🧾</div>
+        <h3 class="font-semibold text-lg mb-2">VAT &amp; TDS Returns</h3>
+        <p class="text-slate text-sm leading-relaxed mb-4">Monthly/quarterly VAT computation, online filing, and TDS certificates — fully compliant.</p>
+        <a href="#services" onclick="navigate('services');return false;" class="text-navy text-sm font-semibold hover:gap-3 flex items-center gap-2 transition-all">Learn more <span>→</span></a>
+      </div>
+      <!-- S3 -->
+      <div class="scard bg-white rounded-2xl p-7 border border-mist reveal" style="transition-delay:.15s">
+        <div class="scard-icon w-14 h-14 rounded-xl bg-navylight flex items-center justify-center text-2xl mb-5">💰</div>
+        <h3 class="font-semibold text-lg mb-2">Income Tax</h3>
+        <p class="text-slate text-sm leading-relaxed mb-4">Annual computation, advance tax estimates, and final filing with all supporting schedules.</p>
+        <a href="#services" onclick="navigate('services');return false;" class="text-navy text-sm font-semibold hover:gap-3 flex items-center gap-2 transition-all">Learn more <span>→</span></a>
+      </div>
+      <!-- S4 -->
+      <div class="scard bg-white rounded-2xl p-7 border border-mist reveal" style="transition-delay:.2s">
+        <div class="scard-icon w-14 h-14 rounded-xl bg-navylight flex items-center justify-center text-2xl mb-5">👥</div>
+        <h3 class="font-semibold text-lg mb-2">Payroll &amp; SSF</h3>
+        <p class="text-slate text-sm leading-relaxed mb-4">Monthly salary processing and Social Security Fund contributions &amp; return filing.</p>
+        <a href="#services" onclick="navigate('services');return false;" class="text-navy text-sm font-semibold hover:gap-3 flex items-center gap-2 transition-all">Learn more <span>→</span></a>
+      </div>
+      <!-- S5 -->
+      <div class="scard bg-white rounded-2xl p-7 border border-mist reveal" style="transition-delay:.25s">
+        <div class="scard-icon w-14 h-14 rounded-xl bg-navylight flex items-center justify-center text-2xl mb-5">🏛️</div>
+        <h3 class="font-semibold text-lg mb-2">Company Returns (OCR)</h3>
+        <p class="text-slate text-sm leading-relaxed mb-4">Annual renewal filings, Form A/B, ROC notices, statutory registers, AGM reminders.</p>
+        <a href="#services" onclick="navigate('services');return false;" class="text-navy text-sm font-semibold hover:gap-3 flex items-center gap-2 transition-all">Learn more <span>→</span></a>
+      </div>
+      <!-- S6 -->
+      <div class="scard bg-navy rounded-2xl p-7 reveal" style="transition-delay:.3s">
+        <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center text-2xl mb-5">⚡</div>
+        <h3 class="font-semibold text-lg mb-2 text-white">24-Hour Express</h3>
+        <p class="text-white/70 text-sm leading-relaxed mb-4">Urgent tax clearance, OCR updates, company formation, and more — in 24 hours.</p>
+        <a href="#services" onclick="navigate('services','express');return false;" class="text-sage text-sm font-semibold hover:gap-3 flex items-center gap-2 transition-all">See express services <span>→</span></a>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a href="#services" onclick="navigate('services');return false;" class="inline-flex items-center gap-2 border-2 border-navy text-navy font-semibold px-8 py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY CHOOSE US ──────────────────────────────────────── -->
+<section class="py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <span class="inline-block bg-sagelight text-sagedark text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">Why Enroz</span>
+      <h2 class="font-display text-5xl text-ink leading-tight mb-8">The Standard Others<br><em>Measure Against</em></h2>
+      <div class="space-y-6">
+        <div class="flex gap-5">
+          <div class="w-12 h-12 rounded-full bg-navy text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+          <div>
+            <h4 class="font-semibold mb-1">Timely Filing Guarantee</h4>
+            <p class="text-slate text-sm leading-relaxed">If we miss a deadline due to our error, we pay the penalty. No excuses, no exceptions — our commitment in writing.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="w-12 h-12 rounded-full bg-navy text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+          <div>
+            <h4 class="font-semibold mb-1">Best-in-Class Software</h4>
+            <p class="text-slate text-sm leading-relaxed">Fully integrated, regularly upgraded system. You send digital files — we handle everything behind the scenes.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="w-12 h-12 rounded-full bg-navy text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+          <div>
+            <h4 class="font-semibold mb-1">Free Lifetime Upgrades</h4>
+            <p class="text-slate text-sm leading-relaxed">Customer portal, AI error checks, mobile app, automated bank import — all added automatically, zero extra cost.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="w-12 h-12 rounded-full bg-navy text-white flex items-center justify-center font-bold flex-shrink-0">4</div>
+          <div>
+            <h4 class="font-semibold mb-1">One-Day Onboarding</h4>
+            <p class="text-slate text-sm leading-relaxed">Sign engagement letter → share digital files → we begin within 1 working day. No office visit ever required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials -->
+    <div class="space-y-5 reveal">
+      <div class="tcard bg-cream rounded-2xl p-6 border border-mist border-l-4 border-l-sage">
+        <p class="text-slate text-sm leading-relaxed italic mb-4">"Enroz completely transformed our compliance process. Monthly reports arrive on time without fail, and their advisory alerts have saved us from multiple penalties."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">R</div>
+          <div><p class="font-semibold text-sm">Rajesh Shrestha</p><p class="text-xs text-slate">Owner, RS Trading Co.</p></div>
+        </div>
+      </div>
+      <div class="tcard bg-cream rounded-2xl p-6 border border-mist border-l-4 border-l-navy">
+        <p class="text-slate text-sm leading-relaxed italic mb-4">"The 24-hour express service saved us during a last-minute tender submission. They turned around our tax clearance certificate the same day."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-sagedark text-white flex items-center justify-center font-bold text-sm">P</div>
+          <div><p class="font-semibold text-sm">Priya Tamang</p><p class="text-xs text-slate">CEO, Himalayan Tech Solutions</p></div>
+        </div>
+      </div>
+      <div class="tcard bg-cream rounded-2xl p-6 border border-mist border-l-4 border-l-sage">
+        <p class="text-slate text-sm leading-relaxed italic mb-4">"We run our business remotely and Enroz's digital-first approach is perfect for us. Just email scanned documents and everything is handled professionally."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">A</div>
+          <div><p class="font-semibold text-sm">Anil Gurung</p><p class="text-xs text-slate">Director, Summit Enterprises</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ─────────────────────────────────────────── -->
+<section class="bg-gradient-to-r from-navydark via-navy to-[#1e88e5] py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center reveal">
+    <div class="inline-block bg-sage text-white text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">Limited Offer</div>
+    <h2 class="font-display text-5xl text-white leading-tight mb-4">First Month <em class="text-blue-200">50% Off</em></h2>
+    <p class="text-white/75 text-lg mb-10 max-w-xl mx-auto">Experience Enroz quality risk-free. No setup fee, no hidden costs, no contracts. Start your compliance journey today.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#contact" onclick="navigate('contact');return false;" class="bg-white text-navy font-bold px-10 py-4 rounded-xl hover:bg-cream transition-all hover:-translate-y-1 shadow-xl">Start Today →</a>
+      <a href="#portfolio" onclick="navigate('portfolio');return false;" class="border-2 border-white/40 text-white font-semibold px-10 py-4 rounded-xl hover:bg-white/10 transition-all">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+
+</div>

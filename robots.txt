@@ -1,0 +1,13 @@
+# Enroz Financial Solution
+# https://www.enrozfinancial.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.enrozfinancial.com/sitemap.xml
+
+# Block common sensitive paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
