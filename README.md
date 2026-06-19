@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Enroz Financial Solution — Website
 ### Production-Ready Package · v2.0
 
@@ -208,3 +209,6 @@ Search `index.html` for `src="assets/logo.jpeg"` if you rename it.
 - [ ] Enable Gzip/Brotli on your hosting
 - [ ] Test score at https://pagespeed.web.dev after launch
 
+=======
+# enroz-finance
+>>>>>>> cf49779e027a28753b74bc05843e73fe7f8b299a
