@@ -1,0 +1,8 @@
+/* Enroz Financial Solution - Tailwind Input
+   Run: npx tailwindcss -i css/input.css -o css/tailwind.min.css --minify
+   Then replace the CDN script tag in index.html with:
+   <link rel="stylesheet" href="css/tailwind.min.css">
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,438 @@
+/* ============================================================
+   Enroz Financial Solution — Main Stylesheet
+   Author: Enroz Dev Team
+   Version: 1.0.0
+   ============================================================ */
+
+/* ── Base Reset & Root ────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: #0d1b2a;
+  background: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography ────────────────────────────────────────────── */
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@media (max-width: 639px) {
+  .font-display { line-height: 1.15 !important; }
+  .hero-h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
+  .section-title { font-size: clamp(1.75rem, 8vw, 3rem); }
+}
+
+/* ── SPA Page Transitions ─────────────────────────────────── */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+  animation: fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Navbar ───────────────────────────────────────────────── */
+#topbar {
+  max-height: 40px;
+  transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+#topbar.hidden-bar {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+#mainnav {
+  position: relative;
+  z-index: 9999;
+  overflow: visible !important;
+}
+
+/* Nav link underline animation */
+.nav-link {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #5cb85c;
+  transition: width 0.25s ease;
+  border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active-page::after {
+  width: 100%;
+}
+
+.nav-link.active-page {
+  color: #ffffff !important;
+}
+
+/* ── Services Mega Dropdown ───────────────────────────────── */
+#servicesDropdown {
+  position: static;
+}
+
+.services-panel {
+  position: fixed;
+  top: auto;
+  z-index: 99999;
+  width: min(520px, calc(100vw - 24px));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+#servicesDropdown:hover .services-panel,
+.services-panel:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ── Scroll Reveal Animations ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Transition delays for staggered children */
+.reveal[data-delay="1"] { transition-delay: 0.1s; }
+.reveal[data-delay="2"] { transition-delay: 0.2s; }
+.reveal[data-delay="3"] { transition-delay: 0.3s; }
+.reveal[data-delay="4"] { transition-delay: 0.4s; }
+
+/* ── Cards ────────────────────────────────────────────────── */
+.scard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(21, 101, 192, 0.13);
+}
+
+.scard:hover .scard-icon {
+  background: #1565c0 !important;
+  color: #ffffff !important;
+}
+
+.scard-icon {
+  transition: background 0.25s, color 0.25s;
+}
+
+.price-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+}
+
+.price-card.featured {
+  border-color: #1565c0;
+  box-shadow: 0 20px 60px rgba(21, 101, 192, 0.18);
+}
+
+.tcard {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.tcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px rgba(21, 101, 192, 0.12);
+}
+
+/* ── Back to Top Button ───────────────────────────────────── */
+#btt {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 500;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(80px);
+  opacity: 0;
+}
+
+#btt.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ── Marquee ─────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-inner {
+  animation: marquee 22s linear infinite;
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+}
+
+/* ── Floating Orbs ───────────────────────────────────────── */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-18px) scale(1.03); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(14px) scale(0.97); }
+}
+
+.orb1 { animation: float1 8s ease-in-out infinite; }
+.orb2 { animation: float2 10s ease-in-out infinite; }
+
+/* ── Pulse Dot ───────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+
+.pulse-dot {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ── Promo Shimmer ───────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.promo-shimmer {
+  background: linear-gradient(90deg, #5cb85c 0%, #76c76a 40%, #5cb85c 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* ── Process Step Connector ──────────────────────────────── */
+.process-line {
+  position: relative;
+}
+
+.process-line::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: calc(50% + 24px);
+  right: calc(-50% + 24px);
+  height: 2px;
+  background: linear-gradient(90deg, #1565c0, #5cb85c);
+}
+
+@media (max-width: 767px) {
+  .process-line::before { display: none; }
+}
+
+/* ── FAQ Accordion ───────────────────────────────────────── */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 400px;
+  padding-bottom: 1rem;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* ── Contact Form ────────────────────────────────────────── */
+.input-field {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+/* ── Form Submit Spinner ─────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ── Success Checkmark Pop ───────────────────────────────── */
+@keyframes pop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.success-check {
+  animation: pop 0.4s ease forwards;
+}
+
+/* ── Express Table Rows ──────────────────────────────────── */
+.express-row {
+  transition: background 0.18s;
+}
+
+.express-row:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* ── Compare Table ───────────────────────────────────────── */
+.compare-row:hover td {
+  background: rgba(21, 101, 192, 0.03);
+}
+
+/* ── Mobile Drawer ───────────────────────────────────────── */
+#mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(320px, 85vw);
+  background: #0d1b2a;
+  z-index: 100000;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+#mobileDrawer.open {
+  transform: translateX(0);
+}
+
+#mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  display: none;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+#mobileBackdrop.open {
+  display: block;
+}
+
+/* ── Active Mobile Nav Item ──────────────────────────────── */
+.mob-active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.bg-white-8  { background: rgba(255, 255, 255, 0.08); }
+.bg-white-5  { background: rgba(255, 255, 255, 0.05); }
+.bg-white-2  { background: rgba(255, 255, 255, 0.02); }
+
+/* ── Accessibility ───────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #5cb85c;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-inner,
+  .orb1, .orb2,
+  .promo-shimmer {
+    animation: none;
+  }
+
+  .promo-shimmer {
+    background: #5cb85c;
+  }
+
+  .reveal, .reveal-left, .reveal-right {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Image Lazy Load Placeholder ─────────────────────────── */
+img[loading="lazy"] {
+  background: #e8edf5;
+}
